@@ -1,0 +1,1 @@
+{"index.jsx":"class DisplayMessages extends React.Component {\n  // change code below this line\n  constructor(props) {\n  super(props);\n  // Не вызывайте здесь this.setState()!\n  this.state = { input: '', messages: [] };\n}\n\n  // change code above this line\n  render() {\n    return <div />\n  }\n};"}
