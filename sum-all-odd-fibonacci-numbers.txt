@@ -1,0 +1,29 @@
+/*function sumFibs(num) {
+  return num <= 1 ? num : sumFibs(num - 1) + sumFibs(num - 2);
+}*/
+
+function sumFibs(num){
+  let sum = 0;
+  let i = 1;
+  let temp = fib(i);
+  while (num >= temp) {
+    if (temp % 2 > 0) {
+      sum += temp;
+    }
+    i++;
+    temp = fib(i);
+  }
+  return sum;
+}
+
+function fib(n) {
+  let prev = 0, next = 1;
+  for(let i = 0; i < n; i++){
+    let temp = next;
+    next = prev + next;
+    prev = temp;
+  }
+  return prev;
+};
+
+console.log(sumFibs(1000));
